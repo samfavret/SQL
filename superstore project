@@ -1,0 +1,23 @@
+---order the items by price
+
+SELECT item_name, price
+FROM superstore
+ORDER BY price;
+
+---what is the average price of all items
+
+SELECT SUM(price)
+FROM superstore
+WHERE stock_quantity = 20;
+
+---average price of category kitchen supplies
+
+SELECT AVG(price), category
+FROM superstore
+WHERE category = "Kitchen Supplies";
+
+---how many RVC are in stock 
+
+SELECT item_name, stock_quantity
+FROM superstore
+WHERE item_name="Robot Vacuum Cleaner";
